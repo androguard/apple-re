@@ -1,0 +1,16 @@
+[package]
+name = "apple_re_cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "CLI for inspecting and manipulating iOS IPA files"
+publish = false
+
+[[bin]]
+name = "apple-re"
+path = "src/main.rs"
+
+[dependencies]
+apple_re = { workspace = true }
+clap = { workspace = true }
+zerocopy = { workspace = true }

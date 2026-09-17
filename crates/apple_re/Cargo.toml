@@ -1,0 +1,16 @@
+[package]
+name = "apple_re"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Pure Rust iOS IPA reverse-engineering toolchain"
+
+[dependencies]
+ipa_vfs = { workspace = true }
+macho_core = { workspace = true }
+apple_metadata = { workspace = true }
+arm_disassembler = { workspace = true }
+arm_decompiler = { workspace = true }
+
+[features]
+default = []

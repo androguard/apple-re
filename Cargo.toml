@@ -1,0 +1,29 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/ipa_vfs",
+    "crates/macho_core",
+    "crates/apple_metadata",
+    "crates/apple_re",
+    "crates/apple_re_cli",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+authors = ["apple-re"]
+rust-version = "1.75"
+
+[workspace.dependencies]
+ipa_vfs = { path = "crates/ipa_vfs" }
+macho_core = { path = "crates/macho_core" }
+apple_metadata = { path = "crates/apple_metadata" }
+arm_disassembler = { path = "../arm_disassembler" }
+arm_decompiler = { path = "../arm_decompiler" }
+apple_re = { path = "crates/apple_re" }
+miniz_oxide = { version = "0.8", default-features = false, features = ["with-alloc"] }
+zerocopy = { version = "0.8", default-features = false, features = ["derive"] }
+bitflags = { version = "2", default-features = false }
+clap = { version = "4", features = ["derive"] }
+gimli = { version = "0.32", default-features = false, features = ["read", "endian-reader"] }

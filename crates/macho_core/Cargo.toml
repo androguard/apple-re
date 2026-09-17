@@ -1,0 +1,13 @@
+[package]
+name = "macho_core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Zero-copy Mach-O fat/thin binary parser"
+
+[dependencies]
+zerocopy = { workspace = true }
+bitflags = { workspace = true }
+
+[features]
+default = []

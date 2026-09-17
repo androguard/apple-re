@@ -1,0 +1,13 @@
+[package]
+name = "apple_metadata"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Objective-C / Swift runtime metadata recovery from Mach-O"
+
+[dependencies]
+macho_core = { workspace = true }
+zerocopy = { workspace = true }
+
+[features]
+default = []
